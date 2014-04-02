@@ -1,0 +1,10 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+body {
+  background: black;
+  color: #bebebe;
+  font-family: "Inconsolata", arial, serif;
+  text-align: center;
+  font-size: 100%; }
+
+#timer {
+  font-size: 10vw; }

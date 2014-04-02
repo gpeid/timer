@@ -1,0 +1,15 @@
+@import url(http://fonts.googleapis.com/css?family=Inconsolata);
+$grey: #bebebe;
+$font: 'Inconsolata', arial, serif;
+body {
+	background: black;
+	color: $grey;
+	font-family: $font;
+	text-align: center;
+	font-size: 100%;
+}
+
+#timer{
+	font-size: 10vw;
+
+}
