@@ -1,10 +1,48 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 body {
-  background: black;
+  background-color: black;
   color: #bebebe;
   font-family: "Inconsolata", arial, serif;
-  text-align: center;
-  font-size: 100%; }
+  font-size: 100%;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+  margin: 0; }
 
-#timer {
-  font-size: 10vw; }
+#time {
+  position: absolute;
+  width: 100%;
+  font-size: 5vw; }
+  #time #hours, #time #minutes, #time #seconds, #time #timer {
+    margin-bottom: 50px; }
+  #time #hours {
+    top: 12.5%; }
+  #time #minutes {
+    top: 25%; }
+  #time #seconds {
+    top: 37.5%; }
+  #time #timer {
+    top: 50%; }
+
+button {
+  z-index: 9999; }
+
+.peekaboo {
+  background-position: 0 100%;
+  transition: all 15s cubic-bezier(0.77, 0, 0.175, 1); }
+
+#overlay {
+  height: 100%;
+  width: 100%;
+  background-image: url("http://bluecoronamedia.com/george/images/greic-porthron.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  opacity: 0.025;
+  position: absolute;
+  z-index: -1;
+  transition: all 15s cubic-bezier(0.77, 0, 0.175, 1); }
+
+.progress {
+  height: 50px;
+  width: 0;
+  transition: all 1.66667s linear; }
+
+/*# sourceMappingURL=style.css.map */

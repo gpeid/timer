@@ -1,15 +1,70 @@
 @import url(http://fonts.googleapis.com/css?family=Inconsolata);
 $grey: #bebebe;
 $font: 'Inconsolata', arial, serif;
+$barseconds: #{(100/60)}s;
+$barwidth: percentage((100/60))/100;
+
 body {
-	background: black;
+	background-color: black;
 	color: $grey;
 	font-family: $font;
-	text-align: center;
+	// text-align: center;
 	font-size: 100%;
+	transition: all 0.3s cubic-bezier(0.77, 0, 0.175, 1);
+	margin: 0;
 }
 
-#timer{
-	font-size: 10vw;
+#time{
+	position: absolute;
+	width: 100%;
+	font-size: 5vw;
+	#hours,#minutes,#seconds,#timer{
+		// position: absolute;
+		// left: 0;
+		// @extend .progress;
+		margin-bottom:50px;
+	}
 
+	#hours{
+		top: 2.5 * 5%;
+	}
+	#minutes{
+		top: 2.5 * 10%;
+	}
+	#seconds{
+		top: 2.5 * 15%;
+	}
+	#timer{
+		top: 2.5 * 20%;
+	}
+}
+button{z-index: 9999;}
+
+
+.peekaboo{
+	background-position: 0 100%;
+	transition: all 15s cubic-bezier(0.77, 0, 0.175, 1);
+
+}
+
+
+#overlay{
+	height: 100%;
+	width: 100%;
+	background-image: url("http://bluecoronamedia.com/george/images/greic-porthron.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	opacity: 0.025;
+	position: absolute;
+	// background-position: 0 100%;
+	z-index: -1;
+	transition: all 15s cubic-bezier(0.77, 0, 0.175, 1);
+
+}
+
+.progress {
+	height: 50px;
+	width: 0;//$barseconds;
+	// background: #ebebeb;
+	transition: all $barseconds linear;
 }
